@@ -6,7 +6,12 @@ test actix project
 ```
 $ cargo run --bin server -- -p 8080
 ```
-the above command will start a websocket server on localhost and port 8080
+the above command will start a websocket server on localhost and port 8080, additionally it is possible to start the server
+with a different ip address:
+```
+$ cargo run --bin server -- -i 192.168.0.10 -p 8080
+```
+
 ## and the client: 
 ```
 $ cargo run --bin client -- -i 127.0.0.1 -p 8080
@@ -24,6 +29,6 @@ $ REMOVE x.x.x.x
 ```
 
 ## list of authorized clients
-http://localhost:8080/
+http://<server ip address or localhost(default)>:8080/
 
 
